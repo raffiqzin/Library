@@ -1,0 +1,26 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "tailwind library app project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raffiqzin/Library.git"
+  },
+  "author": "raffiqzin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raffiqzin/Library/issues"
+  },
+  "homepage": "https://github.com/raffiqzin/Library#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "daisyui": "^2.24.0",
+    "normalizecss": "^3.0.0"
+  }
+}

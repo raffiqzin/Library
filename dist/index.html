@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html data-theme="halloween">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <title>Library</title>
+  </head>
+
+  <body>
+    <div class="navbar bg-base-100">
+      <a class="btn btn-ghost normal-case text-xl">Library</a>
+    </div>
+    <div class="mockup-window border bg-base-300 mx-8 p-4">
+      <div id="book-lists" class="flex flex-row gap-4 px-4 py-4 bg-base-200">
+        <div data-theme="dracula" class="basis-1/4 card bg-base shadow-xl">
+          <div class="card-body">
+            <div class="card-actions justify-end">
+              <button class="btn btn-error btn-circle btn-sm">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p>${book.title}</p>
+            <p>${book.author}</p>
+            <p>${book.pages}</p>
+            <div class="form-control">
+              <label class="label cursor-pointer p-0">
+                <span class="label-text text-lg">Read</span>
+                <input
+                  type="checkbox"
+                  checked="checked"
+                  class="checkbox checkbox-primary"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label
+      for="my-modal-3"
+      class="btn modal-button rounded-full w-16 h-16 m-5 text-3xl"
+      >+</label
+    >
+    <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+    <div class="modal">
+      <div id="book-form" class="modal-box relative">
+        <label
+          for="my-modal-3"
+          class="btn btn-sm btn-circle absolute right-2 top-2"
+          >✕</label
+        >
+        <h3 class="text-lg font-bold">Book Details</h3>
+        <p class="py-4">Add the details of your latest collection here!</p>
+        <input
+          type="text"
+          placeholder="Title"
+          class="input input-bordered input-primary w-full my-4"
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          class="input input-bordered input-primary w-full my-4"
+        />
+        <input
+          class="input input-bordered input-primary w-full my-4"
+          type="number"
+          id="pages"
+          placeholder="Pages"
+          required=""
+          max="10000"
+        />
+        <div class="form-control w-full m-0">
+          <label class="label cursor-pointer">
+            <span class="label-text max">Read</span>
+            <input type="checkbox" class="toggle" checked />
+          </label>
+        </div>
+        <button type="submit" class="btn">ADD</button>
+      </div>
+    </div>
+  </body>
+</html>
