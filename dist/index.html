@@ -8,13 +8,13 @@
     <title>Library</title>
   </head>
 
-  <body>
+  <body class="h-screen">
     <div class="navbar bg-base-100">
       <a class="btn btn-ghost normal-case text-xl">Library</a>
     </div>
-    <div class="mockup-window border bg-base-300 mx-8 p-4">
-      <div id="book-lists" class="flex flex-row gap-4 px-4 py-4 bg-base-200">
-        <div data-theme="dracula" class="basis-1/4 card bg-base shadow-xl">
+    <div class="mockup-window border bg-base-300 mx-8 p-4 h-4/5 overflow-auto">
+      <div id="book-lists" class="flex flex-row flex-wrap flex-grow justify-center gap-2 bg-base-200">
+        <div data-theme="dracula" class="flex-initial w-80 card bg-base shadow-xl">
           <div class="card-body">
             <div class="card-actions justify-end">
               <button class="btn btn-error btn-circle btn-sm">
@@ -42,7 +42,6 @@
                 <span class="label-text text-lg">Read</span>
                 <input
                   type="checkbox"
-                  checked="checked"
                   class="checkbox checkbox-primary"
                 />
               </label>
@@ -57,8 +56,8 @@
       >+</label
     >
     <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-    <div class="modal">
-      <div id="book-form" class="modal-box relative">
+    <form id="book-form" class="modal">
+      <div class="modal-box relative">
         <label
           for="my-modal-3"
           class="btn btn-sm btn-circle absolute right-2 top-2"
@@ -69,11 +68,13 @@
         <input
           type="text"
           placeholder="Title"
+          id="title"
           class="input input-bordered input-primary w-full my-4"
         />
         <input
           type="text"
           placeholder="Author"
+          id="author"
           class="input input-bordered input-primary w-full my-4"
         />
         <input
@@ -84,14 +85,14 @@
           required=""
           max="10000"
         />
-        <div class="form-control w-full m-0">
+        <form class="form-control w-full m-0">
           <label class="label cursor-pointer">
             <span class="label-text max">Read</span>
-            <input type="checkbox" class="toggle" checked />
+            <input id="read-checked" type="checkbox" class="toggle" checked/>
           </label>
-        </div>
-        <button type="submit" class="btn">ADD</button>
+        </form>
+        <input type="submit" value="Add Book" class="modal-action btn"/>
       </div>
-    </div>
+    </form>
   </body>
 </html>
