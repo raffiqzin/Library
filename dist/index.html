@@ -16,7 +16,19 @@
       <div id="book-lists" class="flex flex-row flex-wrap flex-grow justify-center gap-2 bg-base-200">
         <div data-theme="dracula" class="flex-initial w-80 card bg-base shadow-xl">
           <div class="card-body">
-            <div class="card-actions justify-end">
+            <p>${book.title}</p>
+            <p>${book.author}</p>
+            <p>${book.pages}</p>
+            <div class="form-control">
+              <label class="label cursor-pointer p-0">
+                <span class="label-text text-lg">Read</span>
+                <input
+                  type="checkbox"
+                  class="checkbox checkbox-primary"
+                />
+              </label>
+            </div>
+            <div class="card-actions justify-center">
               <button class="btn btn-error btn-circle btn-sm">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,18 +45,6 @@
                   />
                 </svg>
               </button>
-            </div>
-            <p>${book.title}</p>
-            <p>${book.author}</p>
-            <p>${book.pages}</p>
-            <div class="form-control">
-              <label class="label cursor-pointer p-0">
-                <span class="label-text text-lg">Read</span>
-                <input
-                  type="checkbox"
-                  class="checkbox checkbox-primary"
-                />
-              </label>
             </div>
           </div>
         </div>
@@ -70,12 +70,14 @@
           placeholder="Title"
           id="title"
           class="input input-bordered input-primary w-full my-4"
+          required
         />
         <input
           type="text"
           placeholder="Author"
           id="author"
           class="input input-bordered input-primary w-full my-4"
+          required
         />
         <input
           class="input input-bordered input-primary w-full my-4"
